@@ -8,11 +8,8 @@ export interface IFlightsParams {
   earliest?: string | null;
 }
 
-const getFlights = async (params: IFlightsParams | null) => {
+const getFlights = async (params: IFlightsParams) => {
   try {
-    if (!params) {
-      return [];
-    }
     const { origin, destination, isInternational, mostExpensive, earliest } =
       params;
 

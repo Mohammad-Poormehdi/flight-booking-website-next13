@@ -11,7 +11,7 @@ interface HomeParams {
 }
 
 const Home = async ({ searchParams }: HomeParams) => {
-  const internationalFlights = await getFlights(searchParams);
+  const allFlights = await getFlights(searchParams);
   return (
     <>
       <Head>
@@ -31,7 +31,7 @@ const Home = async ({ searchParams }: HomeParams) => {
               <hr />
               <Filter />
             </div>
-            <Flights flights={internationalFlights} />
+            <Flights flights={allFlights} />
           </div>
         </div>
         <Contact />
