@@ -1,4 +1,3 @@
-
 import Filter from "@/components/Filter";
 import Logo from "@/components/Logo";
 import Search from "@/components/Search";
