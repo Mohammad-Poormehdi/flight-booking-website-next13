@@ -33,7 +33,6 @@ const getFlights = async (params: IFlightsParams) => {
     });
     return flights;
   } catch (error) {
-    console.error(error, "ERROR_GETTING_FLIGHTS");
     return [];
   }
 };
