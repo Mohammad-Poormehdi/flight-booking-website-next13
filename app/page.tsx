@@ -1,12 +1,8 @@
 // import Contact from "@/components/Contact";
 import Filter from "@/components/Filter";
-import FlightCard from "@/components/FlightCard";
 import Logo from "@/components/Logo";
 import Search from "@/components/Search";
-import { useState, useCallback } from "react";
 import Head from "next/head";
-import axios from "axios";
-import Button from "@/components/Button";
 import getFlights, { IFlightsParams } from "./actions/getFlights";
 import Flights from "@/components/Flights";
 import Contact from "@/components/Contact";

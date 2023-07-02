@@ -1,11 +1,11 @@
 import prisma from "@/lib/prismadb";
 
 export interface IFlightsParams {
-  origin?: string;
-  destination?: string;
-  isInternational?: string;
-  mostExpensive?: string;
-  earliest?: string;
+  origin?: string | null;
+  destination?: string | null;
+  isInternational?: string | null;
+  mostExpensive?: string | null;
+  earliest?: string | null;
 }
 
 const getFlights = async (params: IFlightsParams) => {
