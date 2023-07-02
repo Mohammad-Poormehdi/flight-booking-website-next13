@@ -11,6 +11,7 @@ function Flights({ flights }: FlightsProps) {
     <div className="space-y-3">
       {flights.map((flight) => (
         <FlightCard
+          key={flight.id}
           id={flight.id}
           airline={flight.airline}
           dest={flight.dest}
