@@ -6,15 +6,15 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model Flight {
-  id            String   @id @default(cuid())
+  id            String   @id @default(cuid()) @map("_id")
   airline       String
   take_off      DateTime
-  land          DateTime 
+  land          DateTime
   origin        String
   dest          String
   seats         Int

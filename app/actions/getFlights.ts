@@ -13,6 +13,16 @@ const getFlights = async (params: IFlightsParams) => {
     const { origin, destination, isInternational, mostExpensive, earliest } =
       params;
 
+    if (
+      !origin &&
+      !destination &&
+      !isInternational &&
+      !mostExpensive &&
+      !earliest
+    ) {
+      return [];
+    }
+
     let query: any = {};
     let orderBy: any = {};
 
@@ -25,7 +35,6 @@ const getFlights = async (params: IFlightsParams) => {
     if (earliest === "true") orderBy = { take_off: "asc" };
     if (earliest === "false") orderBy = { take_off: "desc" };
 
-    console.log(query);
 
     const flights = await prisma.flight.findMany({
       where: query,
